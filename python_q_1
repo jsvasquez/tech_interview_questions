@@ -1,0 +1,38 @@
+import datetime
+
+import another_module
+
+print(f"======Starting execution at {datetime.datetime.now().time()}======")
+
+
+def get_pr_developer_email(pr):
+    try:
+        pr_developer_user = pr['user']['ldap_dn'].split(',')[0].split('=')[1]
+        return f"{pr_developer_user}@sebastianv.com"
+    except Exception as e:
+        print('Warning: ' + str(e))
+        return zdClient.get_client().users.me().email
+
+if __name__ == "__main__":
+    args = another_module.analize_args()
+    pr_id = args['pr_id']
+    repository = args['repository']
+    repo_owner = args['repo_owner']
+
+    pr = another_module.get_pr_info(pr_id)
+
+    email = get_pr_developer_email(pr)
+
+    print(f"The e-mail is: {email}")
+
+print(f"======Execution finished at {datetime.datetime.now().time()}======")
+
+
+--
+Console output:
+
+File "/Users/seb/Desktop/Coding/python_q_1.py", line 11
+    return f"{pr_developer_user}@sebastianv.com"
+                                               ^
+SyntaxError: invalid syntax
+[Finished in 0.077s]
