@@ -1,0 +1,31 @@
+Console Output:
+
+* TCP_NODELAY set
+* Connected to 31.99.255.255 (31.99.255.255) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*   CAfile: /etc/ssl/cert.pem
+  CApath: none
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+* SSL connection using TLSv1.2 / ECDHE-ECDSA-AES128-GCM-SHA256
+* ALPN, server accepted to use h2
+* Server certificate:
+*  subject: C=US; ST=California; L=Menlo Park; O=Facebook, Inc.; CN=*.facebook.com
+*  start date: Apr  6 00:00:00 2021 GMT
+*  expire date: Jul  3 23:59:59 2021 GMT
+*  subjectAltName does not match 31.99.255.255
+* SSL: no alternative certificate subject name matches target host name '31.99.255.255'
+* Closing connection 0
+* TLSv1.2 (OUT), TLS alert, close notify (256):
+curl: (60) SSL: no alternative certificate subject name matches target host name '31.99.255.255'
+More details here: https://curl.haxx.se/docs/sslcerts.html
