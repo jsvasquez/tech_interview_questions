@@ -1,5 +1,4 @@
 import datetime
-
 import another_module
 
 def get_pr_developer_email(pr):
@@ -22,13 +21,13 @@ if __name__ == "__main__":
 
     print(f"The e-mail is: {email}")
 
-print(f"======Execution finished at {datetime.datetime.now().time()}======")
+    print(f"======Execution finished at {datetime.datetime.now().time()}======")
 
 
 --
 Console output:
 
-File "/Users/seb/Desktop/Coding/python_q_1.py", line 11
+File "/Users/seb/Desktop/Coding/python_q_1.py", line 7
     return f"{pr_developer_user}@sebastianv.com"
                                                ^
 SyntaxError: invalid syntax
