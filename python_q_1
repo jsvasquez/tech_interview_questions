@@ -5,7 +5,7 @@ def get_pr_developer_email(pr):
     try:
         pr_developer_user = pr['user']['ldap_dn'].split(',')[0].split('=')[1]
         return f"{pr_developer_user}@sebastianv.com"
-    except Exception as e:
+    except KeyError as e:
         print('Warning: ' + str(e))
         return zdClient.get_client().users.me().email
 
